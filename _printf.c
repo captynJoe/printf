@@ -3,9 +3,9 @@
 void print_buffer(char buffer[], int *buff_ind);
 
 /**
- * _printf - Printf function
- * @format: format.
- * Return: Printed chars.
+ * _printf - Custom printf function
+ * @format: Format string.
+ * Return: Number of characters printed.
  */
 int _printf(const char *format, ...)
 {
@@ -26,6 +26,7 @@ int _printf(const char *format, ...)
             buffer[buff_ind++] = format[a];
             if (buff_ind == BUFF_SIZE)
                 print_buffer(buffer, &buff_ind);
+            /* Uncomment the line below to print characters directly */
             /* write(1, &format[a], 1);*/
             printed_chars++;
         }
@@ -45,11 +46,11 @@ int _printf(const char *format, ...)
         }
     }
 
-print_buffer(buffer, &buff_ind);
+    print_buffer(buffer, &buff_ind);
 
-va_end(list);
+    va_end(list);
 
-return (printed_chars);
+    return (printed_chars);
 }
 
 /**
@@ -59,9 +60,9 @@ return (printed_chars);
  */
 void print_buffer(char buffer[], int *buff_ind)
 {
-if (*buff_ind > 0)
-write(1, &buffer[0], *buff_ind);
+    if (*buff_ind > 0)
+        write(1, &buffer[0], *buff_ind);
 
-*buff_ind = 0;
+    *buff_ind = 0;
 }
 
