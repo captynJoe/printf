@@ -1,6 +1,3 @@
-Here is the modified code:
-
-```c
 #include "main.h"
 
 /************************* WRITE HANDLE *************************/
