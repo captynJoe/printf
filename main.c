@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * main - Entry point
+ * main -  the Entry point
  *
  * Return: Always 0
  */
@@ -42,4 +42,3 @@ int main(void)
     printf("Unknown:[%r]\n");
     return (0);
 }
-
