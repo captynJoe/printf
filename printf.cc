@@ -186,6 +186,3 @@ uint8_t PrintfNum(uint64_t arg, uint8_t length,
 	return (count);
 }
 
-
-
-
